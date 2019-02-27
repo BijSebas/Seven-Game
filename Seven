@@ -1,0 +1,39 @@
+import random
+
+def seven():
+    
+    # Keeps track of player input and the round
+    pin = 1
+    count = 1  
+    
+    # List of prompts for player input
+    choice = ['Goed kijken hoe de baas het doet hèèèè!       ',
+              'Ken jij tellen?!                              ',
+              'Wie is Tony?                                  ',
+              "Hoeveel krijg ie nou van 't Leger?            ",
+              'Die naain eleven zit je zo weer in!           ',
+              'Denkt erom dat ik er één ben hoor!            ', 
+              "Hoe zeg die Swartsenegger dat ookalweer?      ",
+              'Aal bie bek!                                  ',
+              'Can you heer mie. Can you... HEAR ME!         ',
+              '80 hoog!                                      ',
+              'Kijk, nou bennie daar begonnen hèèèè.         ',
+              'Ik doe dat rustig hè, voor mn rug hèèè.       ']
+    
+    # List of prompts when a player enters a 7, a number containing 7 or a multitude of 7
+    drink = ['\n\nZUIPEN, VUILNISZAK!                       ',            
+              '\n\nNOU MOT JE VOOR 200 EURO IN JE MIK DOUWEN ',        
+              '\n\nDAT KOMT NIET UIT MET JOU HÈÈÈ!           ',
+              '\n\nIN JE MUIL! GAUW!                         ',
+              '\n\nLOZE PUT... JIJ MOT ZUIPEN HÈÈÈ           ']
+    
+    # Loop that keeps the game running til a player enters a 7, a number containing 7 or a multitude of 7
+    while pin%7 != 0 and (pin - 7)%10 != 0 and (pin <=70 or pin >= 80) and (pin <= 700 or pin >= 800 ):
+        stro = random.choice(choice)
+        pin = int(input(stro))
+        count += 1
+    
+    # Stops the game when a player enters a 7, a number containing 7 or a multitude of 7
+    else:
+        stra = random.choice(drink)
+        print(stra)   
